@@ -1,13 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <title>Page Title</title>
+    <style>
+        .container {
+            background-color: lightgray;
+            padding: 15px;
+            margin: 10px;
+            border: 1px solid black;
+        }
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+            color: red;
+        }
+        .inline-box {
+            background-color: cyan;
+            padding: 5px;
+        }
+    </style>
 </head>
 <body>
-<h1>My First Heading</h1>
-<a href="https://www.google.com/"> Google.co.id </a>
-<label for="btnSubmit"></label>
-<input type="button" id="btnSubmit" class="btnSubmit1" value="Kiriman"/>
-<p>My first paragraph.</p>
+<div class="container">
+    <p>Ini adalah paragraf di dalam elemen <span class="highlight">div</span>.
+        Div bersifat block, sehingga ia membentuk baris baru dan mengambil lebar penuh.</p>
+    <p>Kita bisa menggunakan <span class="inline-box">span</span> untuk
+        memanipulasi teks dalam baris yang sama tanpa memulai baris baru.</p>
+</div>
+
+<div class="container">
+    <h3>Perbedaan utama:</h3>
+    <ul>
+        <li><span class="highlight">Div</span> → block element, biasa digunakan untuk mengelompokkan bagian besar (layout).</li>
+        <li><span class="highlight">Span</span> → inline element, hanya mempengaruhi teks atau elemen kecil di dalamnya.</li>
+    </ul>
+</div>
 </body>
 </html>
