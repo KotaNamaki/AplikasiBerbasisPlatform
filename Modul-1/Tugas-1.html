@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Graphic Designer</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+        :root {
+            --bg-color: #1a1a1c;
+            --primary-pink: #ec008c;
+            --primary-purple: #6a008a;
+            --text-light: #ffffff;
+            --text-gray: #a0a0a0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-light);
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        /* Top Left Background Blob */
+        .top-blob {
+            position: absolute;
+            top: -90px;
+            left: -20px;
+            width: 250px;
+            height: 250px;
+            background: linear-gradient(135deg, var(--primary-pink), var(--primary-purple));
+            border-radius: 30% 60% 70% 30% / 40% 50% 60% 10%;
+            z-index: -2;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 8%;
+            position: relative;
+            z-index: 10;
+        }
+
+        .logo {
+            font-family: 'Oswald', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--text-light);
+            letter-spacing: 2px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 3rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-light);
+            font-size: 0.95rem;
+            font-weight: 400;
+            transition: color 0.3s ease;
+        }
+
+        nav a.active, nav a:hover {
+            color: var(--primary-pink);
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 4rem 8% 0;
+            height: calc(100vh - 120px);
+        }
+
+        .hero-text {
+            flex: 1;
+            max-width: 550px;
+        }
+
+        .hero-text h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        .hero-text h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 4.5rem;
+            font-weight: 700;
+            color: var(--primary-pink);
+            line-height: 1;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+
+        .hero-text p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            line-height: 1.8;
+            margin-bottom: 2.5rem;
+            max-width: 450px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 35px;
+            background-color: var(--primary-pink);
+            color: var(--text-light);
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            box-shadow: 0 8px 20px rgba(236, 0, 140, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            background-color: var(--primary-purple);
+            box-shadow: 0 8px 20px rgba(140, 35, 116, 0.3);
+
+        }
+
+        /* Hero Image Section */
+
+
+        .main-blob {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+            background: linear-gradient(135deg, var(--primary-pink), var(--primary-purple));
+            border-radius: 50% 40% 60% 30% / 40% 50% 60% 50%;
+            z-index: 0;
+        }
+
+        .small-circle-1 {
+            position: absolute;
+            top: 25%;
+            left: 10%;
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-pink);
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .small-circle-2 {
+            position: absolute;
+            bottom: 10%;
+            right: 15%;
+            width: 30px;
+            height: 30px;
+            background-color: var(--primary-purple);
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        /* Decorative bottom left circles */
+        .decor-circle-1 {
+            position: absolute;
+            bottom: 50px;
+            left: 50px;
+            width: 60px;
+            height: 60px;
+            background-color: var(--primary-purple);
+            border-radius: 50%;
+            opacity: 0.8;
+        }
+
+        .decor-circle-2 {
+            position: absolute;
+            bottom: -30px;
+            left: 150px;
+            width: 120px;
+            height: 120px;
+            background-color: var(--primary-pink);
+            border-radius: 50%;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+<div class="top-blob"></div>
+
+<nav>
+    <div class="logo">KOTA</div>
+    <ul>
+        <li><a href="#" class="active">About Me.</a></li>
+        <li><a href="#">Services.</a></li>
+        <li><a href="#">Portfolio.</a></li>
+        <li><a href="#">Hire Me.</a></li>
+    </ul>
+</nav>
+
+<header class="hero">
+    <div class="hero-text">
+        <h2>H2 Here</h2>
+        <h1>H1 Here</h1>
+        <p>Paragraph HERE</p>
+        <a href="#" class="btn">Button Here</a>
+    </div>
+
+
+</header>
+
+<div class="decor-circle-1"></div>
+<div class="decor-circle-2"></div>
+
+</body>
+</html>
